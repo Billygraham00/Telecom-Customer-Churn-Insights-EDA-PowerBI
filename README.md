@@ -6,13 +6,13 @@
 </head>
 <body>
 
-<h1>Customer Churn Exploratory Data Analysis (EDA)</h1>
+<h1>Customer Churn Exploratory Data Analysis (EDA) & Dashboard</h1>
 
 <p>
 This project performs a comprehensive Exploratory Data Analysis (EDA) on a telecom
-customer churn dataset. The analysis focuses on understanding customer behavior,
-service usage patterns, billing preferences, and demographic factors that influence
-customer churn.
+customer churn dataset and presents key insights using an interactive Power BI dashboard.
+The analysis focuses on understanding customer behavior, service usage patterns,
+billing preferences, and demographic factors that influence customer churn.
 </p>
 
 <hr>
@@ -23,6 +23,7 @@ customer churn.
     <li>Understand service usage behavior and preferences</li>
     <li>Study billing, contract, and payment trends</li>
     <li>Identify key indicators contributing to customer churn</li>
+    <li>Present business-ready churn insights using an interactive dashboard</li>
 </ul>
 
 <hr>
@@ -33,6 +34,7 @@ customer churn.
     <li>Pandas and NumPy for data manipulation</li>
     <li>Matplotlib and Seaborn for data visualization</li>
     <li>PyCharm / Jupyter / Google Colab for development and execution</li>
+    <li>Power BI for interactive dashboard and business insights</li>
     <li>CSV dataset format (Customer_Churn_Updated.csv)</li>
 </ul>
 
@@ -43,7 +45,10 @@ customer churn.
     <li><b>eda.py</b> – Object-Oriented EDA implementation</li>
     <li><b>Customer_Churn_Updated.csv</b> – Input dataset</li>
     <li><b>log_code.py</b> – Logging configuration</li>
-    <li><b>Generated PNG files</b> – Saved visualizations</li>
+    <li><b>Generated PNG files</b> – Saved Python visualizations</li>
+    <li><b>powerbi/Customer_Churn_Dashboard.pbix</b> – Power BI dashboard</li>
+    <li><b>powerbi/dashboard.png</b> – Dashboard screenshot</li>
+    <li><b>powerbi/Customer_Churn_Dashboard_Documentation.docx</b> – Dashboard documentation</li>
 </ul>
 
 <hr>
@@ -54,7 +59,8 @@ customer churn.
     <li>Centralized execution through a single <code>run_complete_eda()</code> method</li>
     <li>Try-except blocks for robust error handling</li>
     <li>Logging of execution flow and runtime issues</li>
-    <li>Automated saving of all visualization outputs</li>
+    <li>Automated saving of all Python visualization outputs</li>
+    <li>Separation of analysis (Python) and presentation (Power BI)</li>
 </ul>
 
 <hr>
@@ -62,40 +68,82 @@ customer churn.
 <h2>Data Cleaning Steps</h2>
 <ul>
     <li>Converted <b>TotalCharges</b> column from text to numeric format</li>
-    <li>Handled missing values by replacing them with zero</li>
+    <li>Handled missing values using business logic (zero charges for zero tenure)</li>
     <li>Validated dataset consistency before analysis</li>
 </ul>
 
 <hr>
 
-<h2>Visual Analysis Performed</h2>
+<h2>Exploratory Data Analysis (Python)</h2>
 <ul>
-    <li>Churn distribution analysis</li>
+    <li>Overall churn distribution analysis</li>
     <li>Churn by gender and senior citizen status</li>
     <li>Service usage patterns (Internet, Phone, Multiple Lines)</li>
-    <li>Internet service analysis by SIM operator and gender</li>
-    <li>Contract and billing behavior analysis</li>
+    <li>Contract type and billing behavior analysis</li>
     <li>Payment method impact on churn</li>
-    <li>Quarterly tenure analysis by SIM and churn</li>
-    <li>Average monthly charges comparison</li>
-    <li>Regional and demographic distribution analysis</li>
+    <li>Tenure-based churn analysis</li>
+    <li>Monthly charges comparison between churned and retained customers</li>
 </ul>
 
 <hr>
 
+<h2>Power BI Dashboard</h2>
+
+<p>
+The Power BI dashboard provides a summarized and business-friendly view of customer churn.
+It focuses on key KPIs and major churn drivers rather than repeating detailed EDA visuals.
+</p>
+
+<h3>Key KPIs</h3>
+<ul>
+    <li>Total Customers</li>
+    <li>Churned Customers</li>
+    <li>Churn Rate (%)</li>
+    <li>Average Monthly Charges</li>
+    <li>Average Tenure</li>
+</ul>
+
+<h3>Core Dashboard Visuals</h3>
+<ul>
+    <li>Churn Rate % by Contract Type</li>
+    <li>Churn Rate % by Internet Service</li>
+    <li>Churn Rate % by Payment Method</li>
+    <li>Churn Rate % by Customer Tenure</li>
+    <li>Churn by Senior Citizen</li>
+</ul>
+
+<h3>Interactive Filters</h3>
+<ul>
+    <li>Contract</li>
+    <li>Internet Service</li>
+    <li>Gender</li>
+    <li>Senior Citizen</li>
+    <li>Payment Method</li>
+</ul>
+
+<p>
+Note: GitHub does not preview Power BI files.  
+Please download the <b>.pbix</b> file and open it using <b>Power BI Desktop</b>.
+A dashboard screenshot is provided for quick reference.
+</p>
+
+<hr>
 
 <h2>Output</h2>
 <p>
-All visualizations are generated automatically and saved as image files
-in the project directory for further analysis and reporting.
+Python-based visualizations are saved as image files in the project directory.
+The Power BI dashboard presents summarized insights through an interactive,
+single-page business dashboard.
 </p>
 
 <hr>
 
 <h2>Conclusion</h2>
 <p>
-This EDA provides meaningful insights into customer churn behavior and
-can be used as a foundation for predictive modeling and retention strategies.
+This project combines Python-based exploratory data analysis with Power BI dashboarding
+to deliver both deep analytical understanding and high-level business insights.
+The findings can support customer retention strategies and serve as a foundation
+for future predictive modeling.
 </p>
 
 </body>
